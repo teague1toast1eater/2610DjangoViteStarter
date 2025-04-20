@@ -26,3 +26,18 @@ This application is a hybrid MPA and SPA. It reuses all of the login stuff that 
 
 ## Using this project for future classes/personal projects
 Many students in the past have chosen to use this starter app template for projects in other classes like CS3450 and for personal projects. I strongly encourage you to do so! Please check with your other instructors before you use this project as a starting point for their classes. You may also want to add your name to the author field in the `pyproject.toml` file.
+
+
+
+How do you determine how much to charge for your work?
+------------------------------------------------------
+- TRACK HOW MUCH TIME YOU SPEND ON A PROJECT: that way you can accurately estimate how long it will take you to do similar projects in the future
+- don't be afraid to not tell clients how long it will take until you know how long it will take. 
+    - respond with "I don't know, but give me XX amount of time and I will get back to you with an estimate of how long it will take"
+
+- look into getting CompTIA Security+ certified: would for sure increase your value as a developer (and your salary)
+
+- 'open closed principal' 
+
+
+
