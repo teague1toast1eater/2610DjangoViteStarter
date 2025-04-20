@@ -1,10 +1,5 @@
 from django.db import models
-
-# User model
-class User(models.Model):
-    id = models.BigAutoField(primary_key=True)
-    username = models.CharField(max_length=150, unique=True)
-    email = models.EmailField(unique=True)
+from django.contrib.auth.models import User
 
 # Quiz model
 class Quiz(models.Model):

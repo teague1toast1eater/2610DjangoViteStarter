@@ -3,6 +3,7 @@ from django.conf  import settings
 import json
 import os
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.forms.models import model_to_dict
 
@@ -40,3 +41,16 @@ def todos(req):
     
     todos = Todo.objects.filter(user=req.user)
     return JasonResponse({"todo": model_to_dict(todos)})
+
+@login_required
+def see_profile(req):
+    if req.method == "POST":
+        body = json.loads(req.body)
+        user = User.objects.get(id=req.user.id)
+        user.first_name = body["first_name"]
+        user.last_name = body["last_name"]
+        user.email = body["email"]
+        user.save()
+        return JsonResponse({"user": model_to_dict(user)})
+    
+    return JsonResponse({"user": model_to_dict(req.user)})
